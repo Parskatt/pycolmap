@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 project(PyCOLMAP)
 
-set(CMAKE_CUDA_ARCHITECTURES "native")
 find_package(colmap 3.9 REQUIRED)
 
 if(${CERES_VERSION} VERSION_LESS "2.2.0")

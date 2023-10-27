@@ -64,6 +64,7 @@ class CMakeBuild(build_ext):
             build_args += ['--', '/m']
         else:
             cmake_args += ['-DCMAKE_BUILD_TYPE=' + cfg]
+            cmake_args += ['-DCMAKE_CUDA_ARCHITECTURES=50']
             build_args += ['--', '-j2']
 
         env = os.environ.copy()

@@ -11,6 +11,7 @@ using namespace pybind11::literals;
 #include "estimators/alignment.cc"
 #include "estimators/essential_matrix.cc"
 #include "estimators/fundamental_matrix.cc"
+#include "estimators/similarity_transform.cc"
 #include "estimators/generalized_absolute_pose.cc"
 #include "estimators/homography.cc"
 #include "estimators/two_view_geometry.cc"
@@ -76,6 +77,7 @@ PYBIND11_MODULE(pycolmap, m) {
   bind_absolute_pose_estimation(m, PyRANSACOptions);
   bind_essential_matrix_estimation(m);
   bind_fundamental_matrix_estimation(m);
+  bind_similarity_transform_estimation(m);
   bind_generalized_absolute_pose_estimation(m);
   bind_homography_estimation(m);
   bind_two_view_geometry_estimation(m);
